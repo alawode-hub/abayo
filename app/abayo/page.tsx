@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -26,7 +27,7 @@ const photos = [
   { src: "/dad1.jpeg", alt: "A special memory with Abayo" },
   { src: "/dad2.jpeg", alt: "A beautiful moment with Abayo" },
   { src: "/dad3.jpeg", alt: "A memorable moment with Abayo" },
-  { src: "/dad4.jpg", alt: "A cherished family memory" },
+  { src: "/dad4.jpeg", alt: "A cherished family memory" },
 ];
 
 export default function AbayoPage() {
@@ -81,30 +82,30 @@ export default function AbayoPage() {
         ))}
       </div>
 
-      {/* MUSIC BUTTON */}
+      {/* MUSIC BUTTON - MOVED TO BOTTOM LEFT */}
       <button
         onClick={() => setMusicOn((previous) => !previous)}
-        className="fixed bottom-5 right-5 z-[60] bg-black/90 backdrop-blur-md border border-yellow-400/50 px-5 py-3 rounded-full text-xs sm:text-sm flex items-center gap-2 shadow-lg hover:bg-yellow-500 hover:text-black transition"
+        className="fixed bottom-5 left-4 sm:left-6 z-[60] bg-black/90 backdrop-blur-md border border-yellow-400/50 px-5 py-3 rounded-full text-xs sm:text-sm flex items-center gap-2 shadow-lg hover:bg-yellow-500 hover:text-black transition"
       >
         {musicOn ? "✕ Close Music" : "♫ Play King Sunny Adé"}
       </button>
 
-      {/* YOUTUBE MUSIC PLAYER */}
+      {/* YOUTUBE MUSIC PLAYER - MOVED TO BOTTOM LEFT */}
       {musicOn && (
-        <div className="fixed bottom-[75px] right-4 z-[60] w-[min(320px,calc(100vw-32px))] bg-[#0d1430] border border-yellow-500/40 rounded-2xl p-3 shadow-2xl">
+        <div className="fixed bottom-[75px] left-4 sm:left-6 z-[60] w-[min(320px,calc(100vw-32px))] bg-[#0d1430] border border-yellow-500/40 rounded-2xl p-3 shadow-2xl">
           <p className="text-yellow-400 text-xs font-semibold mb-2">
             ♫ NOW PLAYING
           </p>
 
           <p className="text-white text-sm font-serif mb-3">
-            Appreciation — King Sunny Adé
+            Congratulations (Happy Birthday) — King Sunny Adé
           </p>
 
           <div className="aspect-video w-full overflow-hidden rounded-xl">
             <iframe
               key={musicOn ? "playing" : "stopped"}
               src={`https://www.youtube-nocookie.com/embed/${SONG_ID}?autoplay=1&playsinline=1&rel=0`}
-              title="King Sunny Ade - Appreciation"
+              title="King Sunny Ade - Congratulations (Happy Birthday)"
               className="w-full h-full"
               allow="autoplay; encrypted-media; picture-in-picture"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -481,4 +482,4 @@ export default function AbayoPage() {
       </div>
     </main>
   );
-};
+}
