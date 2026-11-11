@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { authGuard, logout, createPost, getMyPosts, deletePost, updatePost } from "@/actions/user";
 import UserModel from "@/models/userModel";
 import dbConnect from "@/lib/db";
