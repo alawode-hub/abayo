@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -27,7 +26,7 @@ const photos = [
   { src: "/dad1.jpeg", alt: "A special memory with Abayo" },
   { src: "/dad2.jpeg", alt: "A beautiful moment with Abayo" },
   { src: "/dad3.jpeg", alt: "A memorable moment with Abayo" },
-  { src: "/dad4.jpeg", alt: "A cherished family memory" },
+  { src: "/dad4.jpg", alt: "A cherished family memory" },
 ];
 
 export default function AbayoPage() {
@@ -482,4 +481,4 @@ export default function AbayoPage() {
       </div>
     </main>
   );
-}
+};
